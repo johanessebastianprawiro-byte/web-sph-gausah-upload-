@@ -30,3 +30,5 @@ The hero background uses a locally stored, muted, autoplaying, looping Pexels cl
 Website ini tidak memerlukan proses build. Hubungkan repository Git ke Netlify satu kali dengan memilih folder root repository sebagai publish directory. Konfigurasi tersebut juga tersedia di `netlify.toml`.
 
 Setelah repository terhubung, setiap perubahan yang di-push ke branch produksi akan otomatis diterbitkan oleh Netlify. Folder `netlify-ready/` adalah salinan lama untuk unggah manual; jangan gunakan folder itu sebagai sumber deploy otomatis.
+
+Konfigurasi Netlify menetapkan security headers, termasuk Content Security Policy yang membatasi sumber script, stylesheet, font, gambar, dan media yang digunakan situs. Jika menambahkan layanan pihak ketiga baru, perbarui direktif CSP terkait hanya untuk origin yang diperlukan.
