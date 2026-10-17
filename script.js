@@ -22,49 +22,55 @@ const cursorDot = document.querySelector('.cursor-dot');
 const supportsHoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 
 if (cursorDot && supportsHoverPointer.matches) {
+  let previousPointer = null;
+  let fastMotionTimeout;
+  let fastMotionStartTimeout;
+
   window.addEventListener('pointermove', (event) => {
     if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
 
-    cursorDot.style.left = `${event.clientX + 10}px`;
-    cursorDot.style.top = `${event.clientY + 10}px`;
+    let isFastMovement = false;
+    if (previousPointer) {
+      const elapsed = Math.max(event.timeStamp - previousPointer.time, 1);
+      const distance = Math.hypot(event.clientX - previousPointer.x, event.clientY - previousPointer.y);
+      isFastMovement = distance / elapsed > 0.9;
+    }
+    previousPointer = { x: event.clientX, y: event.clientY, time: event.timeStamp };
+
+    clearTimeout(fastMotionTimeout);
+    fastMotionTimeout = setTimeout(() => {
+      cursorDot.classList.remove('is-fast');
+      clearTimeout(fastMotionStartTimeout);
+      fastMotionStartTimeout = undefined;
+    }, 750);
+
+    if (isFastMovement) {
+      if (!cursorDot.classList.contains('is-fast') && fastMotionStartTimeout === undefined) {
+        fastMotionStartTimeout = setTimeout(() => {
+          cursorDot.classList.add('is-fast');
+          fastMotionStartTimeout = undefined;
+        }, 1500);
+      }
+    } else {
+      clearTimeout(fastMotionStartTimeout);
+      fastMotionStartTimeout = undefined;
+    }
+
+    cursorDot.style.left = `${event.clientX - 6}px`;
+    cursorDot.style.top = `${event.clientY - 6}px`;
+    const elementUnderPointer = document.elementFromPoint(event.clientX, event.clientY);
+    const isOverText = elementUnderPointer?.closest('p, h1, h2, h3, h4, h5, h6, a, li, button, label');
+    cursorDot.classList.toggle('over-text', Boolean(isOverText));
     document.documentElement.classList.add('has-pointer-dot');
   }, { passive: true });
 
   document.documentElement.addEventListener('pointerleave', () => {
     document.documentElement.classList.remove('has-pointer-dot');
-  });
-}
-
-const heroVideo = document.querySelector('.hero-video');
-const videoToggle = document.querySelector('.video-toggle');
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-if (heroVideo && videoToggle) {
-  const syncVideoControl = (isPlaying) => {
-    videoToggle.setAttribute('aria-pressed', String(!isPlaying));
-    videoToggle.setAttribute('aria-label', isPlaying ? 'Jeda video latar' : 'Putar video latar');
-  };
-
-  heroVideo.addEventListener('play', () => syncVideoControl(true));
-  heroVideo.addEventListener('pause', () => syncVideoControl(false));
-
-  if (reducedMotion.matches) {
-    heroVideo.pause();
-    syncVideoControl(false);
-  } else {
-    heroVideo.play().catch(() => syncVideoControl(false));
-  }
-
-  videoToggle.addEventListener('click', () => {
-    if (heroVideo.paused) {
-      heroVideo.play().catch(() => syncVideoControl(false));
-    } else {
-      heroVideo.pause();
-    }
-  });
-
-  reducedMotion.addEventListener('change', (event) => {
-    if (event.matches) heroVideo.pause();
+    cursorDot.classList.remove('is-fast');
+    clearTimeout(fastMotionTimeout);
+    clearTimeout(fastMotionStartTimeout);
+    fastMotionStartTimeout = undefined;
+    previousPointer = null;
   });
 }
 

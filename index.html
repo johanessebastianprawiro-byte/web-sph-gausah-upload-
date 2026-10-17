@@ -38,7 +38,7 @@
 
     <main>
       <section class="hero" id="beranda">
-        <video class="hero-video" muted loop playsinline preload="none" poster="assets/hero-studio-poster.jpg" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="none" poster="assets/hero-studio-poster.jpg" aria-hidden="true">
           <source src="assets/hero-studio.mp4" type="video/mp4" />
           <source src="https://videos.pexels.com/video-files/6248592/6248592-hd_1280_720_25fps.mp4" type="video/mp4" />
         </video>
@@ -56,11 +56,6 @@
           </div>
         </div>
         <div class="hero-meta"><span>Strategi · Kreativitas · Pertumbuhan</span><span class="hero-location">SURABAYA, INDONESIA</span></div>
-        <button class="video-toggle" type="button" aria-label="Jeda video latar" aria-pressed="false">
-          <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" /></svg>
-          <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7z" /></svg>
-          <span>Video latar</span>
-        </button>
         <span class="hero-credit">Footage: Kampus Production / Pexels</span>
       </section>
 
@@ -90,11 +85,39 @@
           <article class="service-item">
             <span class="service-number">03</span>
             <div class="service-title"><h3>Pemasaran digital</h3><p>Jangkau calon pelanggan lewat kanal yang cocok untuk tujuan bisnis.</p></div>
-            <ul><li>Instagram &amp; TikTok</li><li>Facebook &amp; Google</li><li>Perencanaan kampanye</li></ul>
+            <ul><li>Instagram, TikTok &amp; Facebook</li><li>Google Ads &amp; kampanye</li><li>SEO dasar</li></ul>
             <span class="service-arrow" aria-hidden="true">↗</span>
           </article>
         </div>
         <a class="inline-cta" href="https://wa.me/message/ZLDYTVWY77NSD1" target="_blank" rel="noopener noreferrer">Belum yakin pilih layanan yang mana? Tanya admin <span aria-hidden="true">↗</span></a>
+        <div class="pricing-overview" aria-labelledby="pricing-title">
+          <div class="pricing-heading">
+            <p class="eyebrow">Investasi yang transparan</p>
+            <h3 id="pricing-title">Pilih lingkup kerja yang sesuai.</h3>
+            <p>Setiap penawaran merinci layanan, jumlah konten, kanal, dan durasi sebelum pekerjaan dimulai.</p>
+          </div>
+          <div class="pricing-list">
+            <article class="pricing-row">
+              <div><h4>Produksi konten media sosial</h4><p>Pembuatan akun dari nol bila dibutuhkan, perencanaan konten, serta produksi dan unggah satu Reels atau video pendek setiap hari ke kanal yang disepakati.</p><p class="pricing-deal"><strong>Rekomendasi 6 bulan:</strong> Rp10.000.000 total, hemat Rp2.000.000 dibanding tarif bulanan.</p></div>
+              <strong>Rp2.000.000<span>/bulan</span></strong>
+            </article>
+            <article class="pricing-row">
+              <div><h4>Pengelolaan ekosistem digital</h4><p>Pembuatan website satu kali dalam lingkup paket, produksi konten, laporan data bulanan, pembuatan dan pengelolaan kampanye Google Ads, SEO, pengelolaan media sosial, serta balasan komentar. Lingkup kanal dan pekerjaan disepakati sebelum mulai.</p></div>
+              <strong>Rp10.000.000<span>/bulan</span></strong>
+            </article>
+            <article class="pricing-website">
+              <div class="pricing-website-heading"><h4>Pembuatan website saja · bayar satu kali</h4><p>Desain dan pembuatan website, lalu hasil diserahkan kepada klien. Termasuk maksimal 10 revisi; setiap perubahan terpisah dihitung satu revisi. Biaya domain tidak termasuk; kebutuhan hosting dicantumkan terpisah dalam penawaran.</p></div>
+              <div class="website-config-list">
+                <div><span>User</span><strong>Rp5.000.000</strong><small>Maintenance opsional Rp1.000.000/bulan</small></div>
+                <div><span>User + Kasir</span><strong>Rp8.000.000</strong><small>Maintenance opsional Rp2.000.000/bulan</small></div>
+                <div><span>User + Owner</span><strong>Rp10.000.000</strong><small>Maintenance sesuai lingkup, konsultasikan</small></div>
+                <div><span>User + Kasir + Owner</span><strong>Harga konsultasi</strong><small>Maintenance opsional Rp2.500.000/bulan</small></div>
+              </div>
+            </article>
+          </div>
+          <p class="pricing-ad-budget"><strong>Saldo iklan terpisah dari biaya jasa.</strong> Klien membayar langsung ke saldo akun Google Ads miliknya. Biaya domain juga tidak termasuk harga paket. Rincian layanan, durasi, dan kanal dicantumkan dalam penawaran sebelum pekerjaan dimulai.</p>
+          <p class="pricing-terms">Jika tidak ingin melanjutkan paket, konfirmasi paling lambat satu bulan sebelum periode paket berakhir.</p>
+        </div>
       </section>
 
       <section class="project-section" id="proyek">
@@ -102,23 +125,81 @@
           <div class="project-topline"><p class="eyebrow">Contoh proyek</p><span>Surabaya · Retail</span></div>
           <div class="project-grid">
             <div class="project-image-wrap">
-              <img src="https://sphservicephonecellhub.netlify.app/sph-toko.jpg" alt="Interior dan etalase toko SPH Service Phonecell Hub" loading="lazy" />
+              <img src="https://sphservice.netlify.app/sph-toko.jpg" alt="Interior dan etalase toko SPH Service Phonecell Hub" loading="lazy" />
               <span class="image-caption">SPH · Service Phonecell Hub</span>
             </div>
             <div class="project-copy">
-              <p class="project-kicker">Klien · SPH Service Phonecell Hub</p>
-              <h2>Membantu toko alat servis ponsel tampil dan terhubung secara digital.</h2>
-              <p>SPH melayani teknisi handphone dari tokonya di WTC Surabaya. Josjis membantu menghadirkan informasi bisnis dan jalur komunikasi online agar calon pelanggan lebih mudah mengenal dan menghubungi toko.</p>
+              <p class="project-kicker">Pengalaman kerja · SPH Service Phonecell Hub</p>
+              <h2>Dari konten acak ke pemasaran digital yang lebih terarah.</h2>
+              <p>SPH mulai menjual alat servis ponsel melalui e-commerce pada 2020, lalu membuka toko offline di WTC Surabaya pada 2025.</p>
               <div class="project-links">
-                <a class="button button-light" href="https://sphservicephonecellhub.netlify.app" target="_blank" rel="noopener noreferrer">Kunjungi website SPH <span aria-hidden="true">↗</span></a>
+                <a class="button button-light" href="https://sphservice.netlify.app/" target="_blank" rel="noopener noreferrer">Kunjungi website SPH <span aria-hidden="true">↗</span></a>
                 <a class="report-link" href="https://drive.google.com/file/d/15TUkrly_C1UPIqpBRBptR8ZwINu9asWR/view" target="_blank" rel="noopener noreferrer">Lihat laporan proyek <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>
-          <div class="ads-placeholder" aria-label="Area materi Google Ads yang akan dilengkapi">
-            <span class="ads-placeholder-label">Google Ads</span>
-            <span class="ads-placeholder-line"></span>
-            <span class="ads-placeholder-note">Materi kampanye akan ditambahkan akhir bulan ini.</span>
+          <div class="case-study-story" aria-label="Perjalanan pengelolaan digital SPH">
+            <article>
+              <span>01 · Kondisi awal</span>
+              <p>Pada awal 2025, konten sudah rutin terbit tetapi belum berangkat dari kebutuhan teknisi. Foto dengan musik dan ulasan yang lebih menonjolkan efek editing belum banyak menjelaskan manfaat produk.</p>
+            </article>
+            <article>
+              <span>02 · Peran saya</span>
+              <p>Saya bergabung pada Maret 2026 sebagai karyawan content creator dan digital marketer. Hingga mengakhiri masa kerja pada Oktober 2026, saya menangani konten Instagram, TikTok, Facebook, dan YouTube, Google Ads yang mulai berjalan pada April, kampanye, SEO, serta pembuatan website SPH. Pengalaman ini menjadi salah satu dasar saya membangun Josjis Management.</p>
+            </article>
+            <article>
+              <span>03 · Perubahan</span>
+              <p>Arah konten bergeser ke demo alat, tips teknis, ulasan yang menjawab kebutuhan teknisi, dan materi promosi. Laporan di bawah menunjukkan hasil organik media sosial serta data kampanye berbayar secara terpisah.</p>
+            </article>
+          </div>
+          <section class="social-results" aria-labelledby="social-results-title">
+            <div class="social-results-heading">
+              <div><p class="project-kicker">Hasil media sosial organik</p><h3 id="social-results-title">Lebih dari 1,19 juta views lintas platform.</h3></div>
+              <p>Menurut laporan konten SPH, Mei–September 2026.</p>
+            </div>
+            <div class="social-results-grid">
+              <article><span>TikTok</span><strong>657.600+</strong><small>views · 5 bulan</small></article>
+              <article><span>Facebook</span><strong>347.000+</strong><small>views · 5 bulan</small></article>
+              <article><span>YouTube</span><strong>133.217</strong><small>views · 4 bulan</small></article>
+              <article><span>Instagram</span><strong>54.873</strong><small>views · 4 bulan</small></article>
+            </div>
+            <p class="social-results-note">Sekitar 1,19 juta views organik menurut ringkasan laporan SPH. Rincian tiap platform mengikuti periode pengukuran masing-masing. Views bukan jumlah orang unik atau jaminan penjualan.</p>
+          </section>
+          <div class="case-study-channels">
+            <span>Lihat kanal publik SPH</span>
+            <a href="https://www.instagram.com/sphservicephonecellhub/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="https://www.tiktok.com/@servicephonecellhub" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a>
+            <a href="https://www.facebook.com/servicephonecellhub/" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+            <a href="https://www.youtube.com/@servicephonecellhub" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="ads-report" aria-labelledby="ads-report-title">
+            <div class="ads-report-visuals" aria-label="Tangkapan layar laporan Google Ads">
+              <figure class="ads-report-figure">
+                <img src="assets/Gemini_Generated_Image_j2tyowj2tyowj2ty.jpg" alt="Ringkasan Google Ads periode 16 April sampai 15 Oktober 2026: 1.654.821 tayangan, nilai konversi Rp307.820.500, 2.164 konversi, dan biaya Rp18.150.000." loading="lazy" />
+                <figcaption>Ringkasan kampanye · 16 Apr–15 Okt 2026</figcaption>
+              </figure>
+              <figure class="ads-report-figure">
+                <img src="assets/Gemini_Generated_Image_wlbngfwlbngfwlbn.jpg" alt="Insight Google Ads yang membandingkan performa kampanye dengan enam bulan sebelumnya." loading="lazy" />
+                <figcaption>Insight Google Ads · Perbandingan enam bulan</figcaption>
+              </figure>
+            </div>
+            <div class="ads-report-copy">
+              <p class="ads-report-kicker">Google Ads · Performa kampanye</p>
+              <h3 id="ads-report-title">Nilai konversi tumbuh lebih cepat daripada biaya iklan.</h3>
+              <p class="ads-report-period">Kampanye dimulai April 2026 · laporan 16 Apr–15 Okt 2026 dibandingkan 16 Okt 2025–15 Apr 2026</p>
+              <dl class="ads-report-metrics">
+                <div><dt>Nilai konversi</dt><dd>Rp307.820.500</dd><small>Naik 920%</small></div>
+                <div><dt>Konversi tercatat</dt><dd>2.164</dd><small>Total periode</small></div>
+                <div><dt>Biaya iklan</dt><dd>Rp18.150.000</dd><small>Naik 750%</small></div>
+              </dl>
+              <p class="ads-report-insight">Google Ads memproyeksikan 105,32 konversi tambahan. Sebagian besar konversi tercatat hingga tiga hari setelah tayangan.</p>
+              <p class="ads-report-note">Nilai konversi mengikuti pengaturan pelacakan Google Ads dan tidak otomatis sama dengan omzet atau laba aktual.</p>
+            </div>
+          </div>
+          <div class="case-study-website">
+            <div><p class="project-kicker">Hasil kerja · Website</p><h3>Saya juga merancang dan membangun website SPH.</h3></div>
+            <p>Website merangkum informasi toko, produk, lokasi WTC Surabaya, dan jalur kontak agar teknisi lebih mudah mengenal SPH dan menghubungi timnya.</p>
+            <a href="https://sphservice.netlify.app/" target="_blank" rel="noopener noreferrer">Kunjungi website SPH <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -134,6 +215,24 @@
           <article><span>03</span><h3>Jalankan bersama</h3><p>Mulai pekerjaan dengan arah dan komunikasi yang disepakati.</p></article>
           <article><span>04</span><h3>Tinjau hasil</h3><p>Lihat perkembangan, lalu tentukan langkah selanjutnya.</p></article>
         </div>
+        <div class="growth-horizon">
+          <div class="growth-horizon-intro">
+            <p class="eyebrow">Ekspektasi yang realistis</p>
+            <h3>Digital yang kuat perlu waktu.</h3>
+            <p>Rentang berikut adalah panduan perencanaan, bukan janji hasil. Waktu dapat berbeda menurut niche, kesiapan produk, anggaran, dan konsistensi kerja.</p>
+          </div>
+          <div class="growth-horizon-item"><span>Google Ads</span><strong>6–12 bulan</strong><p>Untuk menguji, membaca data, dan mengoptimalkan kampanye secara bertahap.</p></div>
+          <div class="growth-horizon-item"><span>Media sosial</span><strong>6–18 bulan</strong><p>Untuk membangun konten yang konsisten, relevan, dan mendukung leads serta konversi.</p></div>
+        </div>
+        <div class="work-transparency">
+          <p class="eyebrow">Cara kerja yang transparan</p>
+          <div class="work-transparency-grid">
+            <article><h3>Lingkup tertulis</h3><p>Kanal, jumlah output, durasi, revisi, dan biaya disepakati sebelum pekerjaan dimulai.</p></article>
+            <article><h3>Saldo iklan milik klien</h3><p>Klien mengisi saldo langsung ke akun Google Ads sendiri; saldo tidak masuk ke biaya jasa agency.</p></article>
+            <article><h3>Laporan berkala</h3><p>Paket ekosistem mencakup laporan data setiap bulan agar progres dapat ditinjau bersama.</p></article>
+            <article><h3>Serah terima website</h3><p>Pada paket pembuatan website saja, hasil diserahkan kepada klien. Maintenance bersifat opsional.</p></article>
+          </div>
+        </div>
       </section>
 
       <section class="contact-section" id="kontak">
@@ -141,7 +240,7 @@
         <div class="contact-content">
           <p class="eyebrow">Ada yang ingin ditanyakan?</p>
           <h2>Ceritakan bisnis Anda.<br /><span>Kita mulai dari sana.</span></h2>
-          <p>Hubungi admin Josjis Management untuk ngobrol soal kebutuhan pemasaran bisnis Anda.</p>
+          <p>Diskusikan target dan kebutuhan bisnis Anda. Admin akan membantu menyusun lingkup kerja dan penawaran yang sesuai.</p>
           <div class="contact-actions">
             <a class="button button-dark" href="https://wa.me/message/ZLDYTVWY77NSD1" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.1 0C5.55 0 .22 5.33.22 11.88c0 2.1.55 4.14 1.6 5.95L.12 24l6.33-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.47-8.42ZM12.1 21.77a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.76.99 1-3.67-.24-.38a9.85 9.85 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.14 1.03 7.02 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.48-4.46 9.89-9.94 9.89Zm5.45-7.43c-.3-.15-1.77-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.18.2-.35.22-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></svg>
@@ -151,7 +250,9 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="instagram-dot" cx="18" cy="6" r="1"/></svg>
               Instagram
             </a>
+            <a class="contact-email" href="mailto:josjismanagement@gmail.com">josjismanagement@gmail.com</a>
           </div>
+          <p class="service-area">Melayani Surabaya Barat dan sekitarnya: Wiyung, Lidah Kulon, Jeruk, PTC, hingga Driyorejo.</p>
         </div>
         <span class="contact-aside">JOSJIS MANAGEMENT · SURABAYA</span>
       </section>
