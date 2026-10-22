@@ -176,6 +176,26 @@ html.has-pointer-dot .cursor-dot.is-fast { transform: scale(2.5); }
 .project-summary h2 { max-width: 660px; margin: 12px 0 18px; font: 700 clamp(30px, 4vw, 48px)/1.12 var(--display); letter-spacing: -.045em; }
 .project-summary > p:not(.project-kicker) { max-width: 660px; color: rgba(255,255,255,.8); font-size: 15px; line-height: 1.8; }
 .project-summary > p:last-child { color: rgba(255,255,255,.62); font-size: 13px; }
+.client-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.client-card { min-width: 0; overflow: hidden; border: 1px solid #3a3c37; border-radius: 8px; background: #20221e; color: #fff; text-decoration: none; opacity: 0; animation: client-card-arrive .65s cubic-bezier(.2,.7,.25,1) forwards; }
+.client-card:nth-child(2) { animation-delay: .12s; }
+.client-card:nth-child(3) { animation-delay: .24s; }
+.client-card-image { display: grid; min-height: 190px; aspect-ratio: 1.45; place-items: center; overflow: hidden; background: #f5f3ed; }
+.client-card-image-dark { background: #111; }
+.client-card-image img { display: block; width: 100%; height: 100%; max-height: 250px; object-fit: cover; transition: transform .45s cubic-bezier(.2,.7,.25,1); }
+.client-card-image-dark img { width: min(100%, 230px); height: min(100%, 230px); object-fit: contain; }
+.client-card-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 16px; }
+.client-card-caption strong { overflow: hidden; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.client-card-caption > span { flex: none; color: #c6c6bd; font-size: 11px; }
+.client-card-caption > span span { display: inline-block; color: var(--orange); transition: transform .2s ease; }
+.client-card:focus-visible { outline-color: var(--orange); outline-offset: 4px; }
+@keyframes client-card-arrive { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@media (hover: hover) and (pointer: fine) {
+  .client-card { transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+  .client-card:hover { transform: translateY(-6px); border-color: #6b6d64; box-shadow: 0 16px 38px rgba(0,0,0,.25); }
+  .client-card:hover .client-card-image img { transform: scale(1.045); }
+  .client-card:hover .client-card-caption > span span { transform: translate(3px,-3px); }
+}
 .project-links { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
 .button-light { background: #f5f3ed; color: var(--ink); border-radius: 3px; }
 .button-light:hover { background: var(--orange); }
@@ -404,6 +424,11 @@ html.has-pointer-dot .cursor-dot.is-fast { transform: scale(2.5); }
   .copyright { width: 100%; }
   .legal-header { min-height: 68px; padding: 0 22px; }
   .legal-back { font-size: 12px; }
+  .client-links { grid-template-columns: 1fr; gap: 14px; }
+  .client-card { display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: center; }
+  .client-card-image { min-height: 112px; aspect-ratio: 1; }
+  .client-card-image-dark img { width: 92px; height: 92px; }
+  .client-card-caption { min-width: 0; padding: 14px; }
   .floating-whatsapp { width: 48px; height: 48px; right: 16px; bottom: 16px; }
 }
 @media (hover: hover) and (pointer: fine) {

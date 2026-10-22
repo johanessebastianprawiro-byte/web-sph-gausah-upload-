@@ -12,7 +12,7 @@ Open `index.html` in a browser. This project uses plain HTML, CSS, and JavaScrip
 - Instagram: https://www.instagram.com/josjis_management?stkn=MW5jb3ViZWU3eDFobw==
 - Contact email: josjismanagement@gmail.com
 
-The public portfolio summarizes previous professional experience without displaying client identity, client materials, or performance data. Do not add client-identifying materials or campaign data without documented publication permission.
+The public portfolio links to JKR Garage Custom, Raja Warkop STS Plus, and SPH Service Phonecell Hub using supplied brand images and social profiles. The site owner confirmed permission to display these brand images and links. Do not add campaign data or other client materials without documented publication permission.
 
 Content production is Rp2,000,000 per month for one Reels/short-form video per day; the six-month package is Rp10,000,000 total. Digital ecosystem management is Rp10,000,000 per month and includes website creation, content, monthly reporting, Google Ads campaign creation and management, SEO, social media management, and comment replies. Ad spend is excluded and paid directly by the client to Google Ads. Domain fees are excluded from package pricing. Scope, payment, cancellation, and renewal terms should be included in the written offer before agreement.
 
