@@ -172,6 +172,10 @@ html.has-pointer-dot .cursor-dot.is-fast { transform: scale(2.5); }
 .project-kicker { color: var(--orange); text-transform: uppercase; letter-spacing: 1.5px; font-size: 10px; font-weight: 700; margin-bottom: 19px; }
 .project-copy h2 { font-size: clamp(31px, 3.8vw, 48px); max-width: 560px; }
 .project-copy > p:not(.project-kicker) { max-width: 480px; color: #b7b8b1; font-size: 14px; line-height: 1.75; margin: 19px 0 25px; }
+.project-summary { max-width: 760px; padding: clamp(28px, 5vw, 64px) 0; }
+.project-summary h2 { max-width: 660px; margin: 12px 0 18px; font: 700 clamp(30px, 4vw, 48px)/1.12 var(--display); letter-spacing: -.045em; }
+.project-summary > p:not(.project-kicker) { max-width: 660px; color: rgba(255,255,255,.8); font-size: 15px; line-height: 1.8; }
+.project-summary > p:last-child { color: rgba(255,255,255,.62); font-size: 13px; }
 .project-links { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
 .button-light { background: #f5f3ed; color: var(--ink); border-radius: 3px; }
 .button-light:hover { background: var(--orange); }
@@ -263,7 +267,27 @@ html.has-pointer-dot .cursor-dot.is-fast { transform: scale(2.5); }
 .footer-wordmark .wordmark-main span { color: #805000; }
 .footer-wordmark .wordmark-sub { font-size: 7px; letter-spacing: 3px; }
 .site-footer > p { color: var(--muted); margin: 0; font-size: 11px; }
+.footer-links { display: flex; gap: 16px; font-size: 11px; }
+.footer-links a { color: var(--muted); text-underline-offset: 3px; }
 .copyright { color: var(--muted); font-size: 10px; }
+
+.legal-page { min-height: 100vh; background: var(--paper); }
+.legal-header { min-height: 78px; padding: 0 clamp(22px, 6.3vw, 98px); display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--ink); color: var(--paper); }
+.legal-header a { text-decoration: none; }
+.legal-back { font-size: 13px; }
+.legal-main { width: min(100% - 44px, 820px); margin: 0 auto; padding: clamp(48px, 8vw, 92px) 0 96px; }
+.legal-main .eyebrow { color: #805000; }
+.legal-main h1, .legal-main h2 { font-family: var(--display); }
+.legal-main h1 { margin: 8px 0 12px; font-size: clamp(36px, 6vw, 58px); line-height: 1.08; }
+.legal-updated { color: var(--muted); font-size: 13px; }
+.legal-content { margin-top: 40px; }
+.legal-content section + section { margin-top: 32px; }
+.legal-content h2 { margin: 0 0 10px; font-size: 21px; }
+.legal-content p, .legal-content li { color: #454740; font-size: 15px; line-height: 1.75; }
+.legal-content p { margin: 0 0 12px; }
+.legal-content ul { padding-left: 22px; }
+.legal-content a { text-underline-offset: 3px; }
+.legal-footer { padding: 22px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 12px; }
 .floating-whatsapp { position: fixed; z-index: 4; right: 22px; bottom: 22px; width: 52px; height: 52px; display: grid; place-items: center; color: #fff; background: #1e9c62; border: 2px solid var(--paper); border-radius: 50%; box-shadow: 0 5px 18px rgba(0, 0, 0, .2); transition: transform .2s ease; }
 .floating-whatsapp:hover { transform: translateY(-3px); }
 .floating-whatsapp svg { width: 25px; height: 25px; fill: currentColor; }
@@ -376,7 +400,10 @@ html.has-pointer-dot .cursor-dot.is-fast { transform: scale(2.5); }
   .contact-aside { right: 22px; bottom: 17px; font-size: 8px; }
   .site-footer { align-items: flex-start; flex-wrap: wrap; min-height: 128px; padding: 24px 22px; gap: 15px 25px; }
   .site-footer > p { width: calc(100% - 150px); line-height: 1.5; }
+  .footer-links { width: 100%; }
   .copyright { width: 100%; }
+  .legal-header { min-height: 68px; padding: 0 22px; }
+  .legal-back { font-size: 12px; }
   .floating-whatsapp { width: 48px; height: 48px; right: 16px; bottom: 16px; }
 }
 @media (hover: hover) and (pointer: fine) {
