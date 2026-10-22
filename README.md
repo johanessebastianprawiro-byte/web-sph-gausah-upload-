@@ -23,7 +23,7 @@ Content production is Rp2,000,000 per month for one Reels/short-form video per d
 
 Standalone website creation is a one-time fee: user-only Rp5,000,000, user + cashier Rp8,000,000, and user + owner Rp10,000,000. The user + cashier + owner setup is quoted after scoping. Standalone websites include up to 10 revisions and handover; optional monthly maintenance is Rp1,000,000 for user-only, Rp2,000,000 for user + cashier, and Rp2,500,000 for user + cashier + owner. The service area is West Surabaya and nearby areas. Contact: josjismanagement@gmail.com.
 
-The hero background uses a locally stored, muted, autoplaying, looping Pexels clip by Kampus Production, with a Pexels CDN source fallback and a still image in `assets/`. Pexels videos are free to use under the [Pexels License](https://www.pexels.com/license/). Browsers may pause background video when a tab is inactive or to save power.
+The hero uses a locally stored still image from a Pexels clip by Kampus Production, with the source credit shown on the page. Pexels media is free to use under the [Pexels License](https://www.pexels.com/license/). DM Sans and Manrope are self-hosted as WOFF2 files to avoid a render-blocking third-party font request; their SIL Open Font License is included in `assets/FONT-LICENSES.txt`. The campaign report images are resized and compressed for the web.
 
 ## Deploy otomatis ke Netlify
 
